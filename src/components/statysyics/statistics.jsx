@@ -30,5 +30,5 @@ export const Statistics = ({ title = 'Upload stats', stats = { data } }) => {
 };
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.string,
+  stats: PropTypes.array,
 };
