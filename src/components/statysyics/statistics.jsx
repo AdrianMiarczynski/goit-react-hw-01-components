@@ -1,29 +1,17 @@
 import PropTypes from 'prop-types';
-import data from '../data/data.json';
 import './statistics.css';
-
-export const Statistics = ({ title = 'Upload stats', stats = { data } }) => {
+export const Statistics = ({ title = 'Upload stats', stats }) => {
   return (
     <section className="statistics">
       <h2 className="title">{title}</h2>
 
       <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
+        {stats.map(({ id, label, percentage }) => (
+          <li className="item" key={id}>
+            <span className="label">{label}</span>
+            <span className="percentage">{percentage}</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
