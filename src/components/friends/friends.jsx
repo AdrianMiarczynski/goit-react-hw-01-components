@@ -7,14 +7,14 @@ export const FriendList = ({ friends }) => {
     <ul className="friend-list">
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li className="item" key={id}>
+          <li className="friend-item" key={id}>
             {isOnline ? (
               <span className="status-online"></span>
             ) : (
               <span className="status-offline"></span>
             )}
-            <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{name}</p>
+            <img className="friend-avatar" src={avatar} alt="User avatar" width="48" />
+            <p className="friend-name">{name}</p>
           </li>
         );
       })}
@@ -23,5 +23,5 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  firends: PropTypes.array,
+  firends: PropTypes.array
 };

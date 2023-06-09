@@ -34,6 +34,7 @@
 }
 .name {
   font-weight: bold;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
 }
 .stats {
   display: flex;
@@ -46,6 +47,7 @@
   font-size: 1rem;
   border: 1px dotted black;
   border-radius: 0 0 1rem 1rem;
+  background-color: white;
 }
 .stats li {
   display: flex;
